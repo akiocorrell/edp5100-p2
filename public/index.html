@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>we feel wall</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- this is the start of content -->
+
+    <div class="scroll-container">
+      <div class="section" id="titlepage">
+        <h1>[we feel] wall</h1>
+        <h2>~ ichi-go ichi-e<br /></h2>
+
+        <p>
+          <br /><br /><br />
+          <br /><br />↑<br />
+          •• swipe up to begin ••
+        </p>
+      </div>
+      <!--       end titlepage section -->
+
+      <div class="section" id="howfeel">
+        <h1>how are you<br />feeling?</h1>
+        <p>•• add a word or two ••<br /><br /><br /></p>
+
+        <div class="inputGroup">
+          <input type="text" id="mood" required="" autocomplete="off" />
+          <label for="mood">My Mood...</label>
+        </div>
+
+        <p>
+          <br /><br />↑<br />
+          •• swipe up ••
+        </p>
+      </div>
+
+      <div class="section" id="howstrong">
+        <h1>how strong<br />is the<br />feeling?</h1>
+        <p>•• slide left &amp right ••<br /><br /><br /></p>
+        <div class="range" id="strongtick">
+          <input type="range" min="1" max="6" value="3" id="range" />
+          <div class="ticks">
+            <!-- You could generate the ticks based on your min, max & step values. -->
+            <span class="tick">not<br />strong<br />[1]</span>
+            <span class="tick"></span>
+            <span class="tick"></span>
+            <span class="tick"></span>
+            <span class="tick"></span>
+            <span class="tick">super<br />strong<br />[6]</span>
+          </div>
+        </div>
+
+        <p>
+          <br /><br /><br /><br />↑<br />
+          •• swipe up ••
+        </p>
+      </div>
+
+      <div class="section" id="whichcolor">
+        <h1>which color<br />describes<br />how you are<br />feeling?</h1>
+
+        <div class="colorwheel">
+          <label for="color"
+            ><p>•• tap &amp; select color ••<br /><br /></p></label
+          ><br />
+          <input type="color" id="color" name="color" value="#d3cc65" /><br />
+        </div>
+
+        <p>
+          <br /><br />↑<br />
+          •• swipe up ••
+
+        </p>
+      </div>
+
+      <div class="section" id="summary">
+        <h1>my feeling</h1>
+        <p>review or go back up,<br />change, and update<br /><br /><br /></p>
+        <div class="sumoutput">
+          <div id="output"></div>
+        </div>
+
+        <p>
+          <button class="btn button1" id="update">review</button
+          >
+          <br /><br /><br /><br />↑<br />
+          •• swipe up ••
+        </p>
+      </div>
+
+      <div class="section" id="submitpost">
+        <h1>post</h1>
+        <p>Add your feelings<br /><br />to the<br /><br />[we feel]<br /><br />wall<br /><br /><br /></p>
+        <div class="sumoutput"></div>
+
+        <p>
+          <br /><br />
+          <form action="viz.html" method="get">
+            <button class="btn2 button2" id="submit">Add</button>
+        </form>
+          <br />
+        </p>
+      </div>
+    </div>
+    <!--       end container section -->
+
+    <script src="record.js"></script>
+  </body>
+</html>

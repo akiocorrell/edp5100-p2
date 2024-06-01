@@ -1,0 +1,22 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "project2, EDPX-5100",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "project2",
+    "EDPX-5100"
+  ],
+  "author": "Akio Correll",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mappa-mundi": "^0.0.5",
+    "nedb": "^1.8.0",
+    "d3": "^7.9.0"
+  }
+}
