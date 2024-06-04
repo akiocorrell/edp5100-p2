@@ -225,10 +225,10 @@ div#dataviz {
 div#dataviz h1 {
   font-size: 45px;
   padding-top: 5px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   color: #d1bec6;
   text-align: center;
-  margin-top: 0.25em;
+  margin-top: 0.5em;
 }
 
 div#dataviz h2 {
@@ -243,6 +243,7 @@ div#dataviz p {
   color: #d1bec6;
   text-align: center;
 }
+
 
 
 table tr td {
@@ -551,3 +552,7 @@ input[type="color"] {
    width: 20px;
    border-radius: 5px
  }
+
+div#chart {
+    float: center;
+}

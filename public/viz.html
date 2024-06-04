@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <link rel="icon" href="https://glitch.com/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -23,9 +23,11 @@
     <div class="scroll-container">
       <div class="section" id="dataviz">
         <h1>[we feel] wall</h1>
-        <div id="chart"></div>
-                <script type="text/javascript" src="viz.js"></script>
+        <div id="chart">
+          <script type="module" src="viz.js"></script>   
+          </div>
       </div>
+      
     </div>
     <!--       end container section -->
   </body>

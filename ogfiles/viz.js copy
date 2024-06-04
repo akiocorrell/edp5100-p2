@@ -1,0 +1,50 @@
+//
+//this is the v2024.06.03
+
+//declare object arrays
+var json_data = {};
+var user_data = [];
+
+//get the data from the database
+getData();
+async function getData() {
+  const response = await fetch("/api");
+  const data = await response.json();
+
+  json_data.user_data = user_data;
+  json_data.user_data.push(data);
+
+  // console.log(json_data);
+  // console.log(user_data);
+}
+
+// d3 stuff
+// https://github.com/d3/d3#using
+// https://d3js.org/getting-started
+// https://observablehq.com/@d3/pack/2?intent=fork
+
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+
+const width = 360;
+const height = 640;
+const margin = 0.1;
+
+var svg = d3
+  .select("#chart")
+  .append("svg")
+  .attr("height", height)
+  .attr("width", width)
+  .append("g")
+  .attr("transform", "translate(0,0)");
+
+// Create the pack layout.
+const pack = d3
+  .pack()
+  .size([width - margin * 2, height - margin * 2])
+  .padding(3);
+
+d3.json(json_data, gotData);
+
+function gotData(error, graphData) {
+  console.log(graphData);
+}
